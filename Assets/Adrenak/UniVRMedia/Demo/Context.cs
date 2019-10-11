@@ -10,8 +10,9 @@ public class Context : MonoBehaviour {
         VRMediaPlayer player = new VRMediaPlayer(options);
 
         player.Video.source = VideoSource.Url;
-        player.Video.url = "http://www.vatsalambastha.com/downloads/sample-360-video.mp4";
-        player.Video.isLooping = true;
+        player.Video.url = "C:/Users/Victor A/Documents/Projects/GNG1103/Assets/Adrenak/UniVRMedia/Demo/TravelTheWorldInVR.mp4";
+        //player.Video.VideoClip = "TravelTheWorldInVR.mp4";
+        player.Video.isLooping = false;
         player.Video.loopPointReached += delegate (VideoPlayer source) {
             if (!player.Video.isLooping)
                 player.Video.Stop();

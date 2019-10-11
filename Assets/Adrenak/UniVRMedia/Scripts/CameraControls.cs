@@ -7,9 +7,16 @@ namespace Adrenak.UniVRMedia {
         public RotationAxes axes = RotationAxes.MouseXAndY;
         public float sensitivityX = 5;
         public float sensitivityY = 5F;
+        
+        //180 Degrees
+        public float minimumX = -35F;
+        public float maximumX = 35F;
 
+        //360 Degree
+        /* 
         public float minimumX = -360F;
         public float maximumX = 360F;
+        */
 
         public float minimumY = -60F;
         public float maximumY = 60F;
@@ -116,7 +123,22 @@ namespace Adrenak.UniVRMedia {
 #endif
         }
 
+        // 180 Degrees
         public static float ClampAngle(float angle, float min, float max) {
+            angle = angle % 45;
+            if ((angle >= -30F) && (angle <= 30F)) {
+                if (angle < -30F) {
+                    angle += 30F;
+                }
+                if (angle > 30F) {
+                    angle -= 30F;
+                }
+            }
+            return Mathf.Clamp(angle, min, max);
+        }
+        //360 Angles
+
+        /*public static float ClampAngle(float angle, float min, float max) {
             angle = angle % 360;
             if ((angle >= -360F) && (angle <= 360F)) {
                 if (angle < -360F) {
@@ -127,6 +149,6 @@ namespace Adrenak.UniVRMedia {
                 }
             }
             return Mathf.Clamp(angle, min, max);
-        }
+        } */
     }
 }
