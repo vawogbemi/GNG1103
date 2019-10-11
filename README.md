@@ -11,6 +11,11 @@
  
 > git clone https://github.com/victorawogbemi/GNG1103.git
 
+### OR
+
+    Just download the zip file by clicking clone/download and click zip file
+    
+    
     Open Unity Open the folder/demo scene to use.
  
 ## How to edit
