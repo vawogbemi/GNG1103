@@ -6,6 +6,8 @@
 > https://git-scm.com/downloads 
  
     Open cmd or terminal or git bash and enter
+> cd (change directory) to select desired location to install the program. 
+> press TAB can help auto complete the path eg. cd Doc-TAB will auto spell to $home/ cd Documents
  
 > git clone https://github.com/victorawogbemi/GNG1103.git
 
